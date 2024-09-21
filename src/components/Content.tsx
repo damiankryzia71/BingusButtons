@@ -24,7 +24,7 @@ const Content = () => {
     const fetchData = async (endpoint: string) => {
         try {
             let t = { ...data };
-            const response = await fetch(`https://main.d4uai6qz2s5tw.amplifyapp.com//api/${endpoint}`);
+            const response = await fetch(`https://main.d4uai6qz2s5tw.amplifyapp.com/api/${endpoint}`);
             const jsonData = await response.json();
             t[endpoint] = jsonData;
             setData(t);

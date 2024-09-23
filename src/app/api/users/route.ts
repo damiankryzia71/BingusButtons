@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
         });
 
         const client = await pool.connect();
-        const result = await client.query("select * from users");
+        const result = await client.query("select * from user_profile");
         client.release();
 
         return new Response(JSON.stringify(result.rows), {
